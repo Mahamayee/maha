@@ -8,6 +8,9 @@ try (PrintWriter pw = new PrintWriter("./src/main/resources/jsonObject.json")
   ;JsonWriter jsonWriter = Json.createWriter(pw)) {
   jsonWriter.writeObject(jsonObject);
 }
+JsonReader reader = Json.createReader(new FileReader("works./src/main/resources/jsonObject.json"));
+JsonObject obj = reader.readObject();
+System.out.println("Content: " + obj.toString());
 try(PrintWriter pw = new PrintWriter("./src/main/resources/jsonObject.json");
 {
 delete jsonObject.name;
