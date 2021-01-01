@@ -1,0 +1,3 @@
+JsonReader reader = Json.createReader(new FileReader("works./src/main/resources/jsonObject.json"));
+JsonObject obj = reader.readObject();
+System.out.println("Content: " + obj.toString());
