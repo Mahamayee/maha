@@ -8,3 +8,7 @@ try (PrintWriter pw = new PrintWriter("./src/main/resources/jsonObject.json")
   ;JsonWriter jsonWriter = Json.createWriter(pw)) {
   jsonWriter.writeObject(jsonObject);
 }
+try(PrintWriter pw = new PrintWriter("./src/main/resources/jsonObject.json");
+{
+delete jsonObject.name;
+}
