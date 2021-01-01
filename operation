@@ -1,0 +1,10 @@
+JsonArray jsonArray = Json.createArrayBuilder()
+.add("Maha").build();
+JsonObject jsonObject = Json.createObjectBuilder()
+.add("name", jsonArray)
+.add("surname", "Sekar")
+.build();
+try (PrintWriter pw = new PrintWriter("./src/main/resources/jsonObject.json")
+  ;JsonWriter jsonWriter = Json.createWriter(pw)) {
+  jsonWriter.writeObject(jsonObject);
+}
